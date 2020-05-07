@@ -26,14 +26,12 @@ int main()
 		cout << "\n Enter number of variables: ";
 	}
 
-	// Выделяем память под матрицу А и вектора В и х
 	double** a = new double* [n];
 	for (int i = 0; i < n; i++)
 		a[i] = new double[n];
 	double* b = new double[n];
 	double* x = new double[n];
 
-	// Вводим данные
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -65,8 +63,6 @@ int main()
 		}
 	}
 
-
-	//Вывод данных СЛАУ
 	cout << "\n Matrix A: " << endl;
 
 	for (int i = 0; i < n; i++)
@@ -81,7 +77,6 @@ int main()
 	cout << "\n Result: " << endl;
 	Show(n, x);
 
-	//Освобождаем память
 	for (int i = 0; i < n; i++)
 		delete[] a[i];
 
